@@ -382,3 +382,30 @@ cursor:default;
 .p-10 {
 	padding: 10px;
 }
+
+.news_btn_group {
+	margin-left: 2px;
+}
+
+.news_btn {
+	border: 1px solid black;
+	background-color: #ddd;
+	margin-left: -1px;
+}
+
+.news_item {
+	display: none;
+	border: 1px solid black;
+	margin-left: 1px;
+	margin-top: -1px;
+
+}
+
+.activeNews {
+	display: block;
+}
+
+.activebtn {
+	background-color: white;
+	border-bottom: none;
+}
