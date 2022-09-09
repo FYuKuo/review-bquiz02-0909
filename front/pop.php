@@ -17,7 +17,7 @@
             }
             $start = ($page-1)*$limit;
             $limitSql = " LIMIT $start,$limit";
-            $rows = $News->all(['sh'=>1],$limitSql);
+            $rows = $News->all(['sh'=>1]," ORDER BY `good` DESC".$limitSql);
             $i=0;
             foreach ($rows as $key => $row) {
                 $i++;
@@ -69,17 +69,17 @@
         <?php
         if($page > 1){
         ?>
-        <a href="?do=news&page=<?=$page-1?>">&lt;</a>
+        <a href="?do=pop&page=<?=$page-1?>">&lt;</a>
         <?php
         }
         for ($i=1; $i <= $pages ; $i++) { 
         ?>
-        <a href="?do=news&page=<?=$i?>" class="<?=($page == $i)?'nowPage':''?>"><?=$i?></a>
+        <a href="?do=pop&page=<?=$i?>" class="<?=($page == $i)?'nowPage':''?>"><?=$i?></a>
         <?php
         }
         if($page < $pages){
         ?>
-        <a href="?do=news&page=<?=$page+1?>">&gt;</a>
+        <a href="?do=pop&page=<?=$page+1?>">&gt;</a>
         <?php
         }
         ?>
