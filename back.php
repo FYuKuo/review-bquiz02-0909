@@ -37,11 +37,11 @@ include('./api/base.php');
         <div id="mm">
 
             <div class="hal" id="lef">
+                <a class="blo" href="?do=admin">帳號管理</a>
                 <a class="blo" href="?do=po">分類網誌</a>
-                <a class="blo" href="?do=news">最新文章</a>
-                <a class="blo" href="?do=pop">人氣文章</a>
-                <a class="blo" href="?do=know">講座訊息</a>
-                <a class="blo" href="?do=que">問卷調查</a>
+                <a class="blo" href="?do=news">最新文章管理</a>
+                <a class="blo" href="?do=know">講座管理</a>
+                <a class="blo" href="?do=que">問卷管理</a>
             </div>
 
             <div class="hal" id="main">
@@ -49,7 +49,7 @@ include('./api/base.php');
                     <span style="width:78%; display:inline-block;">
 						<marquee>請民眾踴躍投稿電子報，讓電子報成為大家相互交流、分享的園地！詳見最新文章</marquee>
                     </span>
-				
+                    
                     <span style="width:18%; display:inline-block;">
 						<?php
 						if(isset($_SESSION['user'])){
@@ -75,10 +75,10 @@ include('./api/base.php');
 
                     <div class="content">
 						<?php
-						if(file_exists('./front/'.$do.'.php')){
-							include('./front/'.$do.'.php');
+						if(file_exists('./back/'.$do.'.php')){
+							include('./back/'.$do.'.php');
 						}else{
-							include('./front/main.php');
+							include('./back/main.php');
 						}
 						?>
                     </div>
