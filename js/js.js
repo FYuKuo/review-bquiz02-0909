@@ -23,9 +23,3 @@ function good(id,type,user)
 function reset(){
 	$('input[type=text],input[type=password]').val('');
 }
-
-function del(id,table){
-	$.post('./api/del.php',{id,table},()=>{
-		location.reload();
-	})
-}
