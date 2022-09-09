@@ -277,6 +277,18 @@ cursor:default;
 	display:inline-block;
 	background-position:0px 2px;
 }
+#alerr{
+	background:rgba(51,51,51,0.8); 
+	color:#FFF; 
+	height:300px; 
+	width:500px; 
+	position:fixed; 
+	display:none; 
+	z-index:9999; 
+	overflow:auto;
+	padding: 10px;
+	left: 220px;
+}
 #alerr h3
 {
 	color:#0CF;
@@ -419,4 +431,9 @@ cursor:default;
 .po_btn:hover {
 	text-decoration: underline;
 	text-underline-offset: 5px;
+}
+
+.goodBtn {
+	cursor: pointer;
+	color: blue;
 }
