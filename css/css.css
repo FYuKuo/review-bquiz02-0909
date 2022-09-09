@@ -409,3 +409,14 @@ cursor:default;
 	background-color: white;
 	border-bottom: none;
 }
+
+.po_btn {
+	color: blue;
+	cursor: pointer;
+	
+}
+
+.po_btn:hover {
+	text-decoration: underline;
+	text-underline-offset: 5px;
+}
